@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: comments
-          image: makdock/comments:0.0.1
+          image: makdock/comments
