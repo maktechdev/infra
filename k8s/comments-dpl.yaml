@@ -15,3 +15,16 @@ spec:
       containers:
         - name: comments
           image: makdock/comments
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: comments-clusterip-srv
+spec:
+  selector:
+    app: comments
+  ports:
+  - name: comments
+    protocol: TCP
+    port: 4001
+    targetPort: 4001
